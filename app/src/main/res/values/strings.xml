@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FlexibleAdapterWithStickyHeadersDemo</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="action_settings">Settings</string>
+</resources>

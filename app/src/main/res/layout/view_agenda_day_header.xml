@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="item" type="io.centaurea.flexibleadapterwithstickyheadersdemo.AgendaListHeaderVM"/>
+    </data>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/agenda_header_padding_vertical"
+                    android:paddingBottom="@dimen/agenda_header_padding_vertical"
+                    android:paddingLeft="@dimen/agenda_item_padding_horizontal"
+                    android:paddingRight="@dimen/agenda_item_padding_horizontal">
+
+        <TextView
+            android:id="@+id/agenda_list_item_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorSecondaryTextDark"
+            android:textSize="@dimen/font_small"
+            android:text="@{item.label}"/>
+
+    </RelativeLayout>
+</layout>

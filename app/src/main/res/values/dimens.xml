@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="font_x_x_x_large">36dp</dimen>
+    <dimen name="font_x_x_large">30dp</dimen>
+    <dimen name="font_x_large">28dp</dimen>
+    <dimen name="font_large">24dp</dimen>
+    <dimen name="font_normal">18dp</dimen>
+    <dimen name="font_small">14dp</dimen>
+    <dimen name="font_x_small">12dp</dimen>
+
+    <dimen name="padding_x_x_x_large">24dp</dimen>
+    <dimen name="padding_x_x_large">18dp</dimen>
+    <dimen name="padding_x_large">16dp</dimen>
+    <dimen name="padding_large">12dp</dimen>
+    <dimen name="padding_normal">9dp</dimen>
+    <dimen name="padding_small_to_normal">8dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_x_small">4dp</dimen>
+
+    <dimen name="agenda_vertical_line_margin">25dp</dimen>
+    <dimen name="agenda_item_padding_vertical">12dp</dimen>
+    <dimen name="agenda_item_padding_horizontal">18dp</dimen>
+    <dimen name="agenda_header_padding_vertical">10dp</dimen>
+    <dimen name="agenda_item_icon_padding_vertical">4dp</dimen>
+    <dimen name="agenda_item_rating_size">6dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
