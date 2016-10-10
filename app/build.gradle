@@ -22,7 +22,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "io.centaurea.flexibleadapterwithstyckyheadersdemo"
@@ -51,7 +51,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'joda-time:joda-time:2.9.4'
     compile 'com.annimon:stream:1.0.9'
-    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.github.aakira:expandable-layout:1.5.1@aar'
     compile('eu.davidea:flexible-adapter:5.0.0-SNAPSHOT'){
         changing = true

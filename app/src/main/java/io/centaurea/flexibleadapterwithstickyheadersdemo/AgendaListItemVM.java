@@ -29,7 +29,7 @@ public class AgendaListItemVM extends AbstractSectionableItem<AgendaListItemVM.I
         return title;
     }
 
-    public DateTime getDateTime() { return startDate;}
+    public DateTime getStartDateTime() { return startDate;}
 
     //TODO:REF refactor to using RecycleView.ViewHolder instead of FlexibleViewHolder when FlexibleAdapter release will be updated
     public static class ItemViewHolder extends FlexibleViewHolder {
@@ -42,7 +42,7 @@ public class AgendaListItemVM extends AbstractSectionableItem<AgendaListItemVM.I
         }
     }
 
-    public AgendaListItemVM(AgendaListHeaderVM header, Task dataItem, boolean empty) {
+    public AgendaListItemVM(AgendaListHeaderVM header, ScheduleItem dataItem, boolean empty) {
         super(header);
         this.id = dataItem.get_id();
         this.title = dataItem.getTitle();
@@ -85,7 +85,7 @@ public class AgendaListItemVM extends AbstractSectionableItem<AgendaListItemVM.I
 
     public static AgendaListItemVM getEmpty(DateTime date){
         AgendaListHeaderVM newHeader = new AgendaListHeaderVM(date.toDate(), true);
-        Task task = new Task();
+        ScheduleItem task = new ScheduleItem();
         task.setStartTime(newHeader.getDateTime().plusHours(2).toDate());
         task.setTitle("empty");
         task.set_id(UUID.randomUUID().toString());

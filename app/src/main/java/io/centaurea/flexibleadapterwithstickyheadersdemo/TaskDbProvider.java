@@ -7,7 +7,6 @@ import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -15,7 +14,7 @@ import java.util.UUID;
  * Created by Natasha on 23.07.16.
  */
 public class TaskDbProvider {
-    public static List<Task> tasks;
+    public static List<ScheduleItem> tasks;
 
     TaskDbProvider(){
         tasks = new ArrayList<>();
@@ -24,7 +23,7 @@ public class TaskDbProvider {
         DateTime end = startDate.plusMonths(24);
         while (startDate.isBefore(end)) {
             for (int i=0; i<3;i++){
-                Task  t =new Task();
+                ScheduleItem t =new ScheduleItem();
                 t.setTitle(startDate.plusHours(i).toString("yyyy-MM-dd HH:mm"));
                 t.setStartTime(startDate.plusHours(i).toDate());
                 t.set_id(UUID.randomUUID().toString());
@@ -36,8 +35,8 @@ public class TaskDbProvider {
         }
     }
 
-    public List<Task> getTasksPage(DateTime batchStartDate, int offset, boolean equal) {
-        List<Task> result = null;
+    public List<ScheduleItem> getTasksPage(DateTime batchStartDate, int offset, boolean equal) {
+        List<ScheduleItem> result = null;
 
         if (offset > 0){
             result = Stream.of(tasks).filter(t -> {

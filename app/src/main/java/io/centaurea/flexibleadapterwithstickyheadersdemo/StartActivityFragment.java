@@ -22,6 +22,7 @@ public class StartActivityFragment extends Fragment {
     private AgendaFlexibleAdapter adapter;
     private RecyclerView items;
     private View loadItemsButton;
+    private View addItemButton;
 
     public StartActivityFragment() {
     }
@@ -44,19 +45,21 @@ public class StartActivityFragment extends Fragment {
         items.setLayoutManager(new SmoothScrollLinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         adapter = new AgendaFlexibleAdapter(new TaskDbProvider());
         items.setAdapter(adapter);
+        adapter.reloadItems(new DateTime());
 
         loadItemsButton = getView().findViewById(R.id.loadItemsButton);
         loadItemsButton.setOnClickListener(v -> onLoadItemsClick(v));
     }
 
     private void onLoadItemsClick(View v) {
-        adapter.loadItems(DateTime.now().withTimeAtStartOfDay());
+        adapter.reloadItems(DateTime.now().withTimeAtStartOfDay());
     }
 
     private void onDateChanged(DatePicker picker, int y, int m, int d) {
+        adapter.reloadItems(new DateTime(y,m + 1,d,0,0));
         int position = adapter.getGlobalPositionOfHeader(new DateTime(y,m + 1,d,0,0));
         SmoothScrollLinearLayoutManager layoutManager = (SmoothScrollLinearLayoutManager) items.getLayoutManager();
 
-        layoutManager.scrollToPosition(position);
+        layoutManager.smoothScrollToPosition(items,null,position);
     }
 }

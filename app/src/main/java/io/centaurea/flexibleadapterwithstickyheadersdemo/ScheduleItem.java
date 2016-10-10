@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by Natasha on 23.07.16.
  */
-public class Task {
+public class ScheduleItem {
     private String title;
     private Date startTime;
     private String _id;
